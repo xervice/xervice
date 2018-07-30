@@ -16,8 +16,7 @@ build:
 
   tests:
     before:
-      - 'composer global require xervice/xervicecli'
-      - 'xervice dataprovider:generate'
+      - 'vendor/bin/xervice dataprovider:generate'
     override:
       -
         command: 'vendor/bin/codecept run --coverage --coverage-xml'
