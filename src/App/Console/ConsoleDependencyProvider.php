@@ -8,6 +8,7 @@ use Xervice\Console\ConsoleDependencyProvider as XerviceConsoleDependencyProvide
 use Xervice\DataProvider\Console\CleanCommand;
 use Xervice\DataProvider\Console\GenerateCommand;
 use Xervice\Development\Command\GenerateAutoCompleteCommand;
+use Xervice\RabbitMQ\Worker\Command\WorkerCommand;
 
 class ConsoleDependencyProvider extends XerviceConsoleDependencyProvider
 {
@@ -19,7 +20,8 @@ class ConsoleDependencyProvider extends XerviceConsoleDependencyProvider
         return array_merge(
             [
                 new GenerateCommand(),
-                new CleanCommand()
+                new CleanCommand(),
+                new WorkerCommand()
             ],
             $this->getDevCommands()
         );
