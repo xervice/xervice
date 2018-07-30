@@ -1,7 +1,8 @@
 Xervice
 =====================
 
-[![Build Status](https://travis-ci.org/xervice/xervice).svg?branch=master)](https://travis-ci.org/xervice/xervice)
+[![Build Status](https://travis-ci.org/xervice/xervice.svg?branch=master)](https://travis-ci.org/xervice/xervice)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/xervice/xervice/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/xervice/xervice/?branch=master)
 
 
 Description
