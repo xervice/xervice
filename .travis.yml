@@ -13,10 +13,13 @@ services:
   - postgresql
 
 env:
-  - APPLICATION_ENV=scrutinizer
+  - APPLICATION_ENV=travis
 
 install:
   - composer install --no-progress --profile
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
 
 script:
   - vendor/bin/xervice dataprovider:generate
