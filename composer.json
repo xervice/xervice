@@ -33,7 +33,8 @@
       "DataProvider\\": "src/Generated/"
     },
     "psr-0": {
-      "App\\": "src/"
+      "App\\": "src/",
+      "Orm\\": "src/"
     }
   },
   "autoload-dev": {

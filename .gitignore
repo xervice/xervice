@@ -7,4 +7,6 @@
 /composer.lock
 /tests/_output
 /tests/_support/_generated
+/config/propel/*
+/config/config_local.php
 !.gitkeep

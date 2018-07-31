@@ -5,6 +5,9 @@ namespace App\Console;
 
 
 use Xervice\Console\ConsoleDependencyProvider as XerviceConsoleDependencyProvider;
+use Xervice\Database\Command\ConfigGenerateCommand;
+use Xervice\Database\Command\MigrateCommand;
+use Xervice\Database\Command\ModelBuildCommand;
 use Xervice\DataProvider\Console\CleanCommand;
 use Xervice\DataProvider\Console\GenerateCommand;
 use Xervice\Development\Command\GenerateAutoCompleteCommand;
@@ -21,7 +24,10 @@ class ConsoleDependencyProvider extends XerviceConsoleDependencyProvider
             [
                 new GenerateCommand(),
                 new CleanCommand(),
-                new WorkerCommand()
+                new WorkerCommand(),
+                new ModelBuildCommand(),
+                new MigrateCommand(),
+                new ConfigGenerateCommand()
             ],
             $this->getDevCommands()
         );
