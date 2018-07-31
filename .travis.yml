@@ -7,11 +7,17 @@ php:
 before_install:
   - composer global require hirak/prestissimo
 
+env:
+  - APPLICATION_ENV=scrutinizer
+
 install:
   - composer install --no-progress --profile
 
 script:
-  - vendor/bin/xervice da:ge
+  - vendor/bin/xervice dataprovider:generate
+  - vendor/bin/xervice propel:config:generate
+  - vendor/bin/xervice propel:model:build
+  - vendor/bin/xervice propel:migrate
   - vendor/bin/codecept run --coverage --coverage-xml
 
 after_success:
