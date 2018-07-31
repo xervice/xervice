@@ -51,16 +51,6 @@ class IntegrationTest extends \Codeception\Test\Unit
      * @group User
      * @group Integration
      */
-    public function testCreateUser()
-    {
-        $this->assertGreaterThan(1, $this->testUser->getUserId());
-    }
-
-    /**
-     * @group App
-     * @group User
-     * @group Integration
-     */
     public function testReadUserById()
     {
         $userDataProvider = new UserDataProvider();
