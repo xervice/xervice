@@ -11,6 +11,10 @@ build:
   environment:
     php: 7.1
 
+    redis: true
+    rabbitmq: true
+    postgresql: true
+
     variables:
       APPLICATION_ENV: scrutinizer
 
