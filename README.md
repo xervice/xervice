@@ -21,6 +21,8 @@ That's a default xervice application.
     * With debug exceptions will be displayed in your browser
 * Development module for generating autocomplete
 * Preconfigured console command
+* Webpack frontend with bootstrap
+* Example Module with Controller and example bootstrap templates
 
 
 Installation
@@ -57,3 +59,15 @@ Using
 * Test local with php
     * php -S localhost:8000 -t public/
 * Run Application in your browser
+
+
+***Install***
+```
+composer install
+npm install
+```
+
+***Generate frontend***
+```
+npm run build
+```
