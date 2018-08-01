@@ -4,9 +4,12 @@
 /src/Orm/*
 !/src/Generated/Ide
 /src/Generated/Ide/*
-/composer.lock
 /tests/_output
 /tests/_support/_generated
+/node_modules
 /config/propel/*
 /config/config_local.php
+/public/js
+/public/fonts
+/public/css
 !.gitkeep

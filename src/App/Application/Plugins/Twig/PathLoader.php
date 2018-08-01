@@ -19,8 +19,8 @@ class PathLoader implements PathProviderInterface
         $sourcePath = \dirname(__DIR__, 4);
 
         $namespaces = [
-            'Application' => [
-                $sourcePath . '/App/Application/Presentation'
+            'Example' => [
+                $sourcePath . '/App/Example/Presentation'
             ]
         ];
 
