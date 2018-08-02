@@ -22,7 +22,19 @@ That's a default xervice application.
 * Development module for generating autocomplete
 * Preconfigured console command
 * Webpack frontend with bootstrap
-* Example Module with Controller and example bootstrap templates
+    * Search automatically for scss and js files in your theme folder
+* Atomic design
+    * You can add atoms, molecules, organisms and templates to your module theme folder and reuse them in your pages.
+        * Directory structure:
+            * Presentation
+                * Theme
+                    * atomic
+                        * atoms
+                        * molecules
+                        * organisms
+                    * templates
+                    * pages
+
 
 
 Installation

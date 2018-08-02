@@ -4,18 +4,19 @@ declare(strict_types=1);
 namespace App\Twig;
 
 
-use App\Application\Plugins\Twig\PathLoader;
+use Xervice\Atomic\Business\Twig\AtomicTwigExtension;
 use Xervice\Twig\TwigDependencyProvider as XerviceTwigDependencyProvider;
 
 class TwigDependencyProvider extends XerviceTwigDependencyProvider
 {
     /**
-     * @return \Xervice\Twig\Business\Path\PathProviderInterface[]
+     * @return \Xervice\Twig\Business\Twig\Extensions\TwigExtensionInterface[]
      */
-    protected function getPathProviderList(): array
+    protected function getTwigExtensions(): array
     {
         return [
-            new PathLoader()
+            new AtomicTwigExtension()
         ];
     }
+
 }
