@@ -34,6 +34,7 @@ That's a default xervice application.
                         * organisms
                     * templates
                     * pages
+        * Example in Application/Presentation/Theme
 
 
 
