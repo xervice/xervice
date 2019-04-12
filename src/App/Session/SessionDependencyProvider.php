@@ -4,20 +4,19 @@ declare(strict_types=1);
 namespace App\Session;
 
 
-use Xervice\Redis\Session\RedisSessionHandler;
+use Xervice\Core\Business\Model\Dependency\DependencyContainerInterface;
+use Xervice\Redis\Communication\Plugin\RedisSessionHandler;
 use Xervice\Session\SessionDependencyProvider as XerviceSessionDependencyProvider;
 
 class SessionDependencyProvider extends XerviceSessionDependencyProvider
 {
     /**
+     * @param \Xervice\Core\Business\Model\Dependency\DependencyContainerInterface $container
+     *
      * @return \SessionHandlerInterface
-     * @throws \RuntimeException
-     * @throws \InvalidArgumentException
      */
-    protected function getSessionHandler(): \SessionHandlerInterface
+    protected function getSessionHandler(DependencyContainerInterface $container): \SessionHandlerInterface
     {
-        return new RedisSessionHandler(
-            $this->getLocator()->redis()->client()
-        );
+        return new RedisSessionHandler();
     }
 }

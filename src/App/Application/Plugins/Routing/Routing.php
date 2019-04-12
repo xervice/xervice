@@ -5,9 +5,8 @@ namespace App\Application\Plugins\Routing;
 
 
 use App\Application\Communication\Controller\IndexController;
-use App\Example\Communication\Controller\ExampleController;
 use DataProvider\RouteCollectionDataProvider;
-use Xervice\Controller\Business\Route\AbstractControllerProvider;
+use Xervice\Controller\Business\Model\Route\AbstractControllerProvider;
 
 class Routing extends AbstractControllerProvider
 {

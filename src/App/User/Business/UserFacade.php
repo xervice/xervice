@@ -1,16 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace App\User;
+namespace App\User\Business;
 
 
 use DataProvider\UserDataProvider;
-use Xervice\Core\Facade\AbstractFacade;
+use Xervice\Core\Business\Model\Facade\AbstractFacade;
 
 /**
- * @method \App\User\UserFactory getFactory()
- * @method \App\User\UserConfig getConfig()
- * @method \App\User\UserClient getClient()
+ * @method \App\User\Business\UserBusinessFactory getFactory()
  */
 class UserFacade extends AbstractFacade
 {
@@ -22,7 +20,7 @@ class UserFacade extends AbstractFacade
      */
     public function saveUser(UserDataProvider $userDataProvider): UserDataProvider
     {
-        return $this->getFactory()->createUserWriter()->writeUser($userDataProvider);
+        return $this->getFactory()->createUser()->saveUser($userDataProvider);
     }
 
     /**
@@ -32,7 +30,7 @@ class UserFacade extends AbstractFacade
      */
     public function deleteUser(UserDataProvider $userDataProvider): void
     {
-        $this->getFactory()->createUserWriter()->deleteUser($userDataProvider);
+        $this->getFactory()->createUser()->deleteUser($userDataProvider);
     }
 
     /**
@@ -42,6 +40,6 @@ class UserFacade extends AbstractFacade
      */
     public function getUser(UserDataProvider $userDataProvider): UserDataProvider
     {
-        return $this->getFactory()->createUserReader()->getUser($userDataProvider);
+        return $this->getFactory()->createUser()->getUser($userDataProvider);
     }
 }

@@ -4,10 +4,9 @@ declare(strict_types=1);
 namespace App\ExceptionHandler;
 
 
-use App\ExceptionHandler\Business\ExceptionHandler\DebugExceptionHandler;
 use App\Logger\Business\ExceptionHandler\LogExceptionHandler;
 use App\Xervice\Business\ExceptionRegister\WhoopsExceptionHandler;
-use Xervice\ExceptionHandler\Business\Register\Register\ExceptionHandlerRegister;
+use Xervice\ExceptionHandler\Business\Model\Register\Register\ExceptionHandlerRegister;
 use Xervice\ExceptionHandler\ExceptionHandlerDependencyProvider as XerviceExceptionHandlerDependencyProvider;
 
 class ExceptionHandlerDependencyProvider extends XerviceExceptionHandlerDependencyProvider

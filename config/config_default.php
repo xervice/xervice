@@ -1,6 +1,6 @@
 <?php
 
-use Xervice\Config\XerviceConfig;
+use Xervice\Config\Business\XerviceConfig;
 use Xervice\Core\CoreConfig;
 use Xervice\Database\DatabaseConfig;
 use Xervice\DataProvider\DataProviderConfig;
@@ -9,7 +9,7 @@ use Xervice\RabbitMQ\RabbitMQConfig;
 use Xervice\Redis\RedisConfig;
 
 // Core
-$config[CoreConfig::PROJECT_LAYER_NAMESPACE] = 'App';
+$config[CoreConfig::PROJECT_NAMESPACES] = ['App'];
 
 // Debug
 $config[ExceptionHandlerConfig::IS_DEBUG] = true;
@@ -59,3 +59,7 @@ $config[XerviceConfig::ADDITIONAL_CONFIG_FILES] = [
     __DIR__ . '/static/config_propel.php',
     __DIR__ . '/static/config_redis.php'
 ];
+
+// Database
+$config[DatabaseConfig::SCHEMA_TARGET] = dirname(__DIR__) . '/src/Orm/Schema';
+$config[DatabaseConfig::SCHEMA_PATTERN] = '.testschema.xml';

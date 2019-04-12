@@ -10,7 +10,7 @@ use Xervice\Web\WebDependencyProvider as XerviceWebDependencyProvider;
 class WebDependencyProvider extends XerviceWebDependencyProvider
 {
     /**
-     * @return \Xervice\Web\Business\Plugin\WebProviderPluginInterface[]
+     * @return \Xervice\Web\Business\Dependency\Plugin\WebProviderPluginInterface[]
      */
     protected function getRouteProvider(): array
     {

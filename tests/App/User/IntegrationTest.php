@@ -2,15 +2,15 @@
 namespace XerviceTest\User;
 
 use DataProvider\UserDataProvider;
-use Xervice\Core\Locator\Dynamic\DynamicLocator;
-use Xervice\Core\Locator\Locator;
+use Xervice\Core\Business\Model\Locator\Dynamic\Business\DynamicBusinessLocator;
+use Xervice\Core\Business\Model\Locator\Locator;
 
 /**
- * @method \App\User\UserFacade getFacade()
+ * @method \App\User\Business\UserFacade getFacade()
  */
 class IntegrationTest extends \Codeception\Test\Unit
 {
-    use DynamicLocator;
+    use DynamicBusinessLocator;
 
     /**
      * @var UserDataProvider
@@ -31,6 +31,7 @@ class IntegrationTest extends \Codeception\Test\Unit
             ->setFirstname('Unit')
             ->setLastname('Test')
             ->setCompany('My Test Company');
+
 
         $this->testUser = $this->getFacade()->saveUser($this->testUser);
     }
