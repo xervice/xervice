@@ -17,16 +17,17 @@
   "require": {
     "php": ">=7.1.0",
     "xervice/exception-handler": "^2.0.0",
+    "xervice/console": "^2.1.1",
     "xervice/data-provider": "^2.2.1",
     "xervice/log-rabbitmq": "^2.0.0",
     "xervice/event-rabbitmq": "^2.0.0",
     "xervice/api": "^2.0.0",
     "xervice/security": "^3.0.0",
-    "xervice/database": "^2.0.0",
+    "xervice/database": "^2.2.0",
     "xervice/session": "^2.0.0",
     "xervice/redis": "^2.0.0",
     "xervice/atomic": "2.0.0",
-    "propel/propel": "2.0.0-alpha8"
+    "propel/propel": "2.0.0-beta1"
   },
   "autoload": {
     "psr-4": {
